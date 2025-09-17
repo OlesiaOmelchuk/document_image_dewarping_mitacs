@@ -20,13 +20,13 @@ pip install opencv-python
 ├── README.md
 ├── requirements.txt
 ├── run_supervised_training.sh                      # Compute Canada job script
-├── src                                             # Source code
-│   ├── dataset.py                                  # Doc3D dataset class
-│   ├── loss.py                                     # Training losses
-│   ├── model.py                                    # Dewarping model architecture
-│   └── visualization.py                            # Debug training visualizations
-├── train_supervised_dewarper_v2.py                 # Compute Canada training script
-└── train.py                                        # Refactored training script using /src dir
+└── src                                             # Source code
+    ├── dataset.py                                  # Doc3D dataset class
+    ├── loss.py                                     # Training losses
+    ├── model.py                                    # Dewarping model architecture
+    ├── train_supervised_dewarper_v2.py             # Compute Canada training script
+    ├── train.py                                    # Refactored training script
+    └── visualization.py                            # Debug training visualizations                               
 ```
 ## Model Training
 ```train_supervised_dewarper_v2.py``` is the main script used for model training. It contains all the necessary implementation code in one file and was used directly for training setup on Compute Canada (see the bash script ```run_supervised_training.sh```). 
