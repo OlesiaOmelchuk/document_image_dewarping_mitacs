@@ -499,7 +499,7 @@ def validate(model, dataloader, criterion, device, epoch, log_wandb):
 import wandb
 
 # Set your API key and login to W&B
-WANDB_API_KEY = "7e96fbfc04f6dc1cb4dc7d4aca5259056805f90c"
+WANDB_API_KEY = "YOUR_WANDB_API_KEY"
 wandb.login(key=WANDB_API_KEY)
 
 from types import SimpleNamespace
