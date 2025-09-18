@@ -3,12 +3,45 @@ Document image dewarping remains challenging due to complex distortions and reli
 
 ## Installation
 ```bash
+
 pip install -r requirements.txt
 pip install opencv-python
 ```
 
+### Git LFS
+Pre-trained model checkpoints: ```kaggle_5k_98ep.pth```, ```cc_100k_8ep.pth```, ```cc_100k_24ep.pth```, are stored in the Git LFS due to the large file size.
+
+1. Install Git LFS:
+```bash
+# macOS (with Homebrew)
+brew install git-lfs
+
+# Linux
+sudo apt-get install git-lfs
+```
+
+2. Enable Git LFS:
+```bash
+git lfs install
+```
+
+3. Clone the repo together with checkpoints:
+```bash
+git clone https://github.com/OlesiaOmelchuk/document_image_dewarping_mitacs.git
+cd document_image_dewarping_mitacs
+```
+If you have already cloned the repo, fetch the large files by running:
+```bash
+git lfs pull
+```
+
 ## Project tree
 ```
+.
+├── checkpoints                                     # Pretrained checkpoints (Git LFS)
+│   ├── cc_100k_24ep.pth
+│   ├── cc_100k_8ep.pth
+│   └── kaggle_5k_98ep.pth
 ├── notebooks                                       # Kaggle notebooks
 │   ├── docunet-benchmark.ipynb                     # DocUNet benchmark code
 │   ├── end-to-end-inference.ipynb                  # Dewarping, OCR, layout inference
